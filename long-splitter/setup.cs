@@ -1,31 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.IO;
+using System.Runtime.InteropServices;
 namespace long_Splitter
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
-            string currentDirectory = Directory.GetCurrentDirectory();
-            Console.WriteLine("Current Directory: " + currentDirectory);
             
-            // Step 2: Get the parent directory
-            DirectoryInfo parentDirectory = Directory.GetParent(currentDirectory);
-            DirectoryInfo temp = Directory.GetParent(parentDirectory);
-            Console.WriteLine("Parent Directory: " + parentDirectory.FullName);
             
-            // Step 3: Construct the path to the data file
-            // Assuming the data folder is named "data" and the file is named "myfile.txt"
-            string dataFolderPath = Path.Combine(temp.FullName, "data");
-            string filePath = Path.Combine(dataFolderPath, "fileExtensions.txt");
             int x = Program.getInputInt("give me ya best input ladey>", 1, 2, 1);
             bool t = stringInFile(".txt");
             Console.WriteLine(t);
-            {
-                
-            }
+            
         }
         static public int getInputInt(string prompt, int min = 1, int max = 2, int defaultNum = 1) {
             while (true) {
@@ -63,10 +51,14 @@ namespace long_Splitter
         {
             // Read the file line by line and check if the string exists
             Console.WriteLine(filePath);
+            int count = 0;
             foreach (string line in File.ReadLines(filePath))
             {
+                count +=1;
                 if (line == strSearch)  // You can use line.Contains(strSearch) for partial matches
                 {
+                    
+                    Console.WriteLine(count);
                     return true;
                     
                 }

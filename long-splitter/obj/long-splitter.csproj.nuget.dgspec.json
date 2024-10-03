@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\long-splitter.csproj": {}
+    "C:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\long-splitter.csproj": {}
   },
   "projects": {
-    "c:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\long-splitter.csproj": {
+    "C:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\long-splitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\long-splitter.csproj",
+        "projectUniqueName": "C:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\long-splitter.csproj",
         "projectName": "long-splitter",
-        "projectPath": "c:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\long-splitter.csproj",
+        "projectPath": "C:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\long-splitter.csproj",
         "packagesPath": "C:\\Users\\finla\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\obj\\",
+        "outputPath": "C:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
