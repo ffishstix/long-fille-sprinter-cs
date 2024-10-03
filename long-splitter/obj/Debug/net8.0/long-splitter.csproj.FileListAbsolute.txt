@@ -13,3 +13,18 @@ c:\Users\finla\Documents\git\long fille sprinter cs\long-splitter\obj\Debug\net8
 c:\Users\finla\Documents\git\long fille sprinter cs\long-splitter\obj\Debug\net8.0\long-splitter.pdb
 c:\Users\finla\Documents\git\long fille sprinter cs\long-splitter\obj\Debug\net8.0\long-splitter.genruntimeconfig.cache
 c:\Users\finla\Documents\git\long fille sprinter cs\long-splitter\obj\Debug\net8.0\ref\long-splitter.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\long-splitter.exe
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\long-splitter.deps.json
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\long-splitter.runtimeconfig.json
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\long-splitter.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\long-splitter.pdb
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.GeneratedMSBuildEditorConfig.editorconfig
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.AssemblyInfoInputs.cache
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.AssemblyInfo.cs
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.csproj.CoreCompileInputs.cache
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.sourcelink.json
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\refint\long-splitter.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.pdb
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.genruntimeconfig.cache
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\ref\long-splitter.dll
