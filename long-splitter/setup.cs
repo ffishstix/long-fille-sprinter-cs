@@ -10,8 +10,8 @@ namespace long_Splitter
         {
             
             
-            int x = Program.getInputInt("give me ya best input ladey>", 1, 2, 1);
-            bool t = stringInFile(".txt");
+            
+            bool t = stringInFile(".tx");
             Console.WriteLine(t);
             
         }
