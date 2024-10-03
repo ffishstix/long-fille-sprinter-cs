@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("long-splitter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc55b5f16d0c81cba201eb8d7371641e4bd79a99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8571f98df743c35f968bb187e826ffda97b6b1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("long-splitter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("long-splitter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

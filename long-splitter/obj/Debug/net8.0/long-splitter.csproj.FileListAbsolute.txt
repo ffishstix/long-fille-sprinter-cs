@@ -28,3 +28,12 @@ E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\
 E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.pdb
 E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.genruntimeconfig.cache
 E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\ref\long-splitter.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\System.Diagnostics.PerformanceCounter.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-splitter.csproj.AssemblyReference.cache
+E:\onedrive\Documents\git\filesplit cs\long-fille-sprinter-cs\long-splitter\obj\Debug\net8.0\long-spl.2F808E76.Up2Date

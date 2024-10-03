@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "eVBetFbuG9k=",
+  "dgSpecHash": "cnuy2XOJOnA=",
   "success": true,
   "projectFilePath": "E:\\onedrive\\Documents\\git\\filesplit cs\\long-fille-sprinter-cs\\long-splitter\\long-splitter.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\finla\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\finla\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\finla\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.0\\system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
+    "C:\\Users\\finla\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
