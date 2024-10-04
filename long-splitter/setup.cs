@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Runtime.ConstrainedExecution;
 using System.Net.NetworkInformation;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 namespace long_Splitter
 
 {
@@ -17,16 +18,7 @@ namespace long_Splitter
     {
         static void Main(string[] args)
         {
-            int x = getInputInt("enter between 1 and 2",1, 2, 1);
-            bool t = stringInFile(".txt");
-            int a = getSplitFileSize(500001);
-            string form = @"C:\ffishstix\from.txt";
-            string e = getFromFile();
-            string[] c = getToTotal(e);
-            float d = getMemoryAvailable();
-            
-            Console.WriteLine($"input returned: {x}\nfile test worked: {t}\nnew file size: {a}\nto folder: {c[0]+c[1]+c[2]}\navailable memory: {d}\nfrom file {e}");
-            
+            makeNew();
         }
 
         static public float getMemoryAvailable() {
@@ -266,7 +258,7 @@ namespace long_Splitter
             return (getInputInt($"would you like to delete {file} after it gets split (1 no, 2 yes)> ") == 2);
         }
 
-        static public void create (string file, string[] data) {
+        static public void create (string file, string data) {
             while (true) {
                 if (!File.Exists(file)) {
                     Directory.CreateDirectory(file);
@@ -329,8 +321,8 @@ namespace long_Splitter
             int fromFileSize = getSizeFile(fromFile);
             int chunkSize = getSplitFileSize(fromFileSize);
             bool del = deleteOldFileQuestion(fromFile);
-            bool x = settings(prefix, toLocation, suffix, fromFile, fromFileSize, chunkSize, del, randomAmount);
-
+            string x = settings(prefix, toLocation, suffix, fromFile, fromFileSize, chunkSize, del, randomAmount);
+            create("settings.fish", x);
         }
     
     
