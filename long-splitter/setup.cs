@@ -66,14 +66,12 @@ namespace long_Splitter
             }
 
         }
- 
-        
+
         static public bool stringInFile (string strSearch, string filePath="fileExtensions.txt") {
            try
             {
                 // Read the file line by line and check if the string exists
                 Console.WriteLine(filePath);
-                int count = 0;
                 foreach (string line in File.ReadLines(filePath))
                 {
                     if (line.Contains(strSearch)){return true;}  
@@ -119,6 +117,7 @@ namespace long_Splitter
             }
             return false;
         }
+        
         static bool isValidFilePath(string path)
         {
             // Regular expression to validate a file path pattern like "C:/[word]/[word]"
@@ -253,17 +252,18 @@ namespace long_Splitter
             if (!stringInFile(suffix)) {
                 Console.WriteLine($"be warned, you have selected a non default file name\nthis means that it will just show up as {suffix} file and wont look good");
             }
-            return new string[] {prefix.ToString(), toLocation.ToString(), suffix.ToString(), randomAmount.ToString()};
+            return [prefix.ToString(), toLocation.ToString(), suffix.ToString(), randomAmount.ToString()];
             
             
         }
 
         static public int getSizeFile(string fromFile) {
-            return new FileInfo(fromFile).Length;
+            long j = new FileInfo(fromFile).Length;
+            return (int)j;
         }
 
-        static public int deleteOldFileQuestion(string file) {
-            return getInputInt($"would you like to delete {file} after it gets split (1 no, 2 yes)> ");
+        static public bool deleteOldFileQuestion(string file) {
+            return (getInputInt($"would you like to delete {file} after it gets split (1 no, 2 yes)> ") == 2);
         }
 
         static public void create (string file, string[] data) {
@@ -325,10 +325,11 @@ namespace long_Splitter
             string prefix = arr[0];
             string toLocation = arr[1];
             string suffix = arr[2];
-            int randg = int.Parse(arr[3]);
-            long fromFileSize = getSizeFile(fromFile);
-            int fromFileSizeInt = int.Parse(fromFileSize); 
-            int chunkSize = getSplitFileSize(int.Parse(fromFileSize));
+            int randomAmount = int.Parse(arr[3]);
+            int fromFileSize = getSizeFile(fromFile);
+            int chunkSize = getSplitFileSize(fromFileSize);
+            bool del = deleteOldFileQuestion(fromFile);
+            bool x = settings(prefix, toLocation, suffix, fromFile, fromFileSize, chunkSize, del, randomAmount);
 
         }
     
