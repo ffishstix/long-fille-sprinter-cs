@@ -322,7 +322,7 @@ namespace long_Splitter
             int chunkSize = getSplitFileSize(fromFileSize);
             bool del = deleteOldFileQuestion(fromFile);
             string x = settings(prefix, toLocation, suffix, fromFile, fromFileSize, chunkSize, del, randomAmount);
-            create("settings.fish", x);
+            create(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "aaa.txt"), x);
         }
     
     
