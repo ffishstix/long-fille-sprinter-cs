@@ -9,7 +9,9 @@ using System.Net;
 using System.Diagnostics;
 using System.Runtime.ConstrainedExecution;
 using System.Net.NetworkInformation;
+using System.Text.Json;
 namespace long_Splitter
+
 {
     internal class Program
     {
@@ -20,11 +22,10 @@ namespace long_Splitter
             int a = getSplitFileSize(500001);
             string form = @"C:\ffishstix\from.txt";
             string e = getFromFile();
-            string[] f = [e];
-            string c = getToTotal(f);
+            string[] c = getToTotal(e);
             float d = getMemoryAvailable();
             
-            Console.WriteLine($"input returned: {x}\nfile test worked: {t}\nnew file size: {a}\nto folder: {c}\navailable memory: {d}\nfrom file {e}");
+            Console.WriteLine($"input returned: {x}\nfile test worked: {t}\nnew file size: {a}\nto folder: {c[0]+c[1]+c[2]}\navailable memory: {d}\nfrom file {e}");
             
         }
 
@@ -35,7 +36,7 @@ namespace long_Splitter
             
         }
 
-        static public int getInputInt(string prompt, int min = 1, int max = 2, int defaultNum = 1) {
+        static public int getInputInt(string prompt="> ", int min = 1, int max = 2, int defaultNum = 1) {
             while (true) {
                 Console.WriteLine(prompt);
                 string userinput = Console.ReadLine();
@@ -65,38 +66,32 @@ namespace long_Splitter
             }
 
         }
-
+ 
+        
         static public bool stringInFile (string strSearch, string filePath="fileExtensions.txt") {
            try
-        {
-            // Read the file line by line and check if the string exists
-            Console.WriteLine(filePath);
-            int count = 0;
-            foreach (string line in File.ReadLines(filePath))
             {
-                count +=1;
-                if (line == strSearch)  // You can use line.Contains(strSearch) for partial matches
+                // Read the file line by line and check if the string exists
+                Console.WriteLine(filePath);
+                int count = 0;
+                foreach (string line in File.ReadLines(filePath))
                 {
-                    
-                    Console.WriteLine(count);
-                    return true;
-                    
+                    if (line.Contains(strSearch)){return true;}  
                 }
-                
-            }return false;
+                return false;
 
-            
-        }
-        catch (FileNotFoundException)
-        {
-            Console.WriteLine("Error: The file was not found.");
-            return false;
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error: {ex.Message}");
-            return false;
-        }
+                
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("Error: The file was not found.");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return false;
+            }
            
         } 
     
@@ -235,6 +230,7 @@ namespace long_Splitter
         }
     
         static public string[] getToTotal (string fromFile) {
+
             string toLocation = getToFolder(fromFile);
             string fromExtension = Path.GetExtension(fromFile);
             
@@ -244,7 +240,7 @@ namespace long_Splitter
             
             Console.WriteLine("\nplease specify the file prefix> ");
             string prefix = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(toLocation)) {
+            if (string.IsNullOrWhiteSpace(prefix)) {
                 prefix = "";
             }
 
@@ -257,12 +253,86 @@ namespace long_Splitter
             if (!stringInFile(suffix)) {
                 Console.WriteLine($"be warned, you have selected a non default file name\nthis means that it will just show up as {suffix} file and wont look good");
             }
-            return new string[] {prefix.ToString(), toLocation.ToString(), suffix.ToString()};
+            return new string[] {prefix.ToString(), toLocation.ToString(), suffix.ToString(), randomAmount.ToString()};
             
             
         }
 
+        static public int getSizeFile(string fromFile) {
+            return new FileInfo(fromFile).Length;
+        }
 
+        static public int deleteOldFileQuestion(string file) {
+            return getInputInt($"would you like to delete {file} after it gets split (1 no, 2 yes)> ");
+        }
+
+        static public void create (string file, string[] data) {
+            while (true) {
+                if (!File.Exists(file)) {
+                    Directory.CreateDirectory(file);
+                } else {Console.Write("you will be deleting your old data with this");}
+                
+                string jsonString = JsonSerializer.Serialize(data);
+                try {
+                    File.WriteAllText(file, jsonString);
+                }
+                catch (Exception ex) {
+                    Console.WriteLine($"error occured while trying to put json in file {ex}");
+                }
+            } 
+        }
+
+        static public void delete(string file) {
+            try {
+                Directory.Delete(file);
+            } catch (Exception ex) {
+                Console.WriteLine($"an error occured while deleting old files {ex}");
+            }
+        }
+
+        static public string settings (string prefix, string toLocation, string suffix, string formFile, int fromFileSize, int chunckSize, bool delete, int randg){
+            var settingObject = new {
+                prefix = prefix,
+                toLocation = toLocation,
+                suffix = suffix,
+                fromFile = formFile,
+                chunckSize = chunckSize,
+                delete = delete,
+                randg = randg,
+                runNum = 0
+            };
+            string jsonString = JsonSerializer.Serialize(settingObject, new JsonSerializerOptions { WriteIndented = true });
+            return jsonString;
+        }
+
+        static public void makeNew () {
+            string fromFile;
+            while (true) {
+                bool temp = false;
+                fromFile = getFromFile();
+                int i;
+                char j;
+                for (i = 0; i < fromFile.Length; i++) {
+                    j = fromFile[i];
+                    if (j == ' ' || j == '\n') {
+                        Console.WriteLine("one of your answers was null, reenter \n");
+                    }else {temp = true;}
+                }
+                if (temp){break;}
+            }
+            
+            string[] arr = getToTotal(fromFile);
+            string prefix = arr[0];
+            string toLocation = arr[1];
+            string suffix = arr[2];
+            int randg = int.Parse(arr[3]);
+            long fromFileSize = getSizeFile(fromFile);
+            int fromFileSizeInt = int.Parse(fromFileSize); 
+            int chunkSize = getSplitFileSize(int.Parse(fromFileSize));
+
+        }
+    
+    
     }
 }
 

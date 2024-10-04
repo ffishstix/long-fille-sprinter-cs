@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cnuy2XOJOnA=",
+  "dgSpecHash": "id7n3PliJ4c=",
   "success": true,
-  "projectFilePath": "E:\\onedrive\\Documents\\git\\filesplit cs\\long-fille-sprinter-cs\\long-splitter\\long-splitter.csproj",
+  "projectFilePath": "C:\\Users\\finla\\Documents\\git\\long fille sprinter cs\\long-splitter\\long-splitter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\finla\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\finla\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
