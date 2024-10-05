@@ -19,6 +19,7 @@ namespace long_Splitter
         static void Main(string[] args)
         {
             makeNew();
+            string x = Console.ReadLine();
         }
 
         static public float getMemoryAvailable() {
@@ -259,28 +260,22 @@ namespace long_Splitter
         }
 
         static public void create (string file, string data) {
-            while (true) {
-                if (!File.Exists(file)) {
-                    Directory.CreateDirectory(file);
-                } else {Console.Write("you will be deleting your old data with this");}
-                
-                string jsonString = JsonSerializer.Serialize(data);
-                try {
-                    File.WriteAllText(file, jsonString);
-                }
-                catch (Exception ex) {
-                    Console.WriteLine($"error occured while trying to put json in file {ex}");
-                }
-            } 
+            
+            if (!File.Exists(file)) {
+                Directory.CreateDirectory(file);
+            } else {Console.Write("you will be deleting your old data with this");}
+            
+            string jsonString = JsonSerializer.Serialize(data);
+            try {
+                File.WriteAllText(file, jsonString);
+            }
+            catch (Exception ex) {
+                Console.WriteLine($"error occured while trying to put json in file {ex}");
+            }
+            
         }
 
-        static public void delete(string file) {
-            try {
-                Directory.Delete(file);
-            } catch (Exception ex) {
-                Console.WriteLine($"an error occured while deleting old files {ex}");
-            }
-        }
+        
 
         static public string settings (string prefix, string toLocation, string suffix, string formFile, int fromFileSize, int chunckSize, bool delete, int randg){
             var settingObject = new {
@@ -322,7 +317,7 @@ namespace long_Splitter
             int chunkSize = getSplitFileSize(fromFileSize);
             bool del = deleteOldFileQuestion(fromFile);
             string x = settings(prefix, toLocation, suffix, fromFile, fromFileSize, chunkSize, del, randomAmount);
-            create(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "aaa.txt"), x);
+            create(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "settings.fish"), x);
         }
     
     
