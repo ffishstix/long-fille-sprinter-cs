@@ -19,6 +19,7 @@ namespace long_Splitter
         static void Main(string[] args)
         {
             makeNew();
+            Console.WriteLine("it worked wooo now head over to split.cs");
             string x = Console.ReadLine();
         }
 
@@ -261,9 +262,9 @@ namespace long_Splitter
 
         static public void create (string file, string data) {
             
-            if (!File.Exists(file)) {
-                Directory.CreateDirectory(file);
-            } else {Console.Write("you will be deleting your old data with this");}
+            if (File.Exists(file)) {
+                Console.Write("you will be deleting your old data with this");
+            }
             
             string jsonString = JsonSerializer.Serialize(data);
             try {
