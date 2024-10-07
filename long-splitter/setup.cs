@@ -263,7 +263,7 @@ namespace long_Splitter
         static public void create (string file, string data) {
             
             if (File.Exists(file)) {
-                Console.Write("you will be deleting your old data with this");
+                Console.WriteLine($"you will be deleting your old data with this process, \nit can be found in {file}");
             }
             
             string jsonString = JsonSerializer.Serialize(data);
