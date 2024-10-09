@@ -11,7 +11,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Net.NetworkInformation;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-namespace long_Splitter
+namespace Setup
 
 {
     internal class Program
