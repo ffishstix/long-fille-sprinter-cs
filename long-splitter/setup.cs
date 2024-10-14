@@ -16,11 +16,13 @@ namespace Setup
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void memp()
         {
+            
             makeNew();
-            Console.WriteLine("it worked wooo now head over to split.cs");
-            string x = Console.ReadLine();
+            Console.WriteLine("woo all sorted now onto splitting it");
+            string[] temp = [];
+            split.Program.Main(temp);
         }
 
         static public float getMemoryAvailable() {
