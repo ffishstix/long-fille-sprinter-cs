@@ -11,6 +11,8 @@ using System.Runtime.ConstrainedExecution;
 using System.Net.NetworkInformation;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace Setup
 
 {
@@ -292,7 +294,34 @@ namespace Setup
                 runNum = 0
             };
             string jsonString = JsonSerializer.Serialize(settingObject, new JsonSerializerOptions { WriteIndented = true });
-            return jsonString;
+
+
+            /*
+             *
+             * Working JSON writer
+             * needs Settings class
+             *
+             */
+			List<Settings> _data = new List<Settings>();
+			_data.Add(new Settings()
+			{
+				prefix = prefix,
+				toLocation = toLocation,
+				suffix = suffix,
+				fromFile = Path.Combine(formFile, ""),
+				chunkSize = chunckSize,
+				delete = delete,
+				randg = randg,
+				runNum = 0
+			});
+
+			string json = JsonSerializer.Serialize(_data);
+			File.WriteAllText(@"c:/temp/path.json", json);
+
+
+
+
+			return jsonString;
         }
 
         static public void makeNew () {
